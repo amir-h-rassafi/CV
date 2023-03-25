@@ -1,0 +1,207 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PlushCV - One Page Two Column Resume
+% LaTeX Template
+% Version 1.0 (11/28/2021)
+%
+% Author:
+% Shubham Mazumder (http://mazumder.me)
+%
+% Hacked together from:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add more icon options 
+% 4. Fix hacky left alignment on contact line
+% 5. Remove Hacky fix for awkward extra vertical space
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the vertical limit.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%Icons:
+%%Main: https://icons8.com/icons/carbon-copy
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{plushcv}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\namesection{Amir Hossein}{Rassafi}{Senior Software Engineer}{
+\contactlineVtwo{\href{amir-h-rassafi.github.io}{Home}}{\href{https://github.com/amir-h-rassafi}{github}}{\href{https://www.linkedin.com/in/amir-rassafi/}{LinkedIn}}{\href{mailto:amir.rassafi@gmail.com}{gmail}}{\href{}{+989375648815}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{minipage}[t]{0.70\textwidth} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experiences}
+\runsubsection{\href{https://www.linkedin.com/company/digikala/mycompany/}{\authorimg{dk.png} DIGIKALA.com}}
+\descript{| \textbf{TechLead At Operation Tribe}}
+\location{May 2022 – Current | Tehran, Iran}
+\vspace{5pt} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\sectionsep
+\item Deploy \textbf{keycloak} on \textbf{k8s} and integrated with \textbf{go} services.
+\item Design ApiSchema library to bound controllers with objects and create \textbf{Swagger} doc automaticly and it's compatible with \textbf{Symfony} framework for \textbf{Rest API}.
+\item Owner of extracting Inventory (with more than \textbf{100k RPS}) and Shipping services from a big monolith to \textbf{Microservices}.
+\item Implement an \textbf{Outbox} pattern with \textbf{MySQL} in \textbf{Core} to emit event consistent.
+\item Benchmark \textbf{Temporal} and tunning that for managing \textbf{distributed transaction} in our microservice architecture.(\textbf{+1k} TPS) with \textbf{GO, PHP}.
+\item Create an infra to dispatch event throw \textbf{Debezium} and \textbf{Kafka}.
+\item Design logistics as service platform \textbf{(drop shipping)} with \textbf{MySql}, \textbf{Redis}.
+\item Business \textbf{strategy} reviews to make sure capacity and infrastructure compatibility.
+\end{tightemize}
+\vspace{5pt} % Hacky fix for awkward extra vertical space
+\runsubsection{\href{https://www.linkedin.com/company/digikala/mycompany/}{\authorimg{dk.png} DIGIKALA.com}}
+\descript{| \textbf{TechLead At Fulfillment Squad}}
+\location{June 2021 – May 2022 | Tehran, Iran}
+\begin{tightemize}
+\item Refactor fulfillment pick service(\textbf{1M} req/day).
+\item Design \textbf{backtesting platform} for WMS procedures to reduce improvement costs and help system analysis with \textbf{Python, AsyncIO}.
+\item Design warehouses inventory engine with \textbf{+20M variants and +10 warehouses}.
+
+\end{tightemize}
+
+\vspace{5pt} % Hacky fix for awkward extra vertical space
+\runsubsection{\href{https://www.linkedin.com/company/digikala/mycompany/}{\authorimg{dk.png} DIGIKALA.com}}
+\descript{| Senior software engineer}
+\location{January 2020 – June 2021 | Tehran, Iran}
+
+\begin{tightemize}
+\item Re Architecture of job assignment system to optimize the distribution of jobs over virtual machines.
+\item Adding \textbf{Mcrouter} to make our \textbf{Memcached} cluster HA(protect with connection pooling, replication) and scalable.
+\item Increasing performance of \textbf{Elasticsearch} indexer with adding more \textbf{cache layer}.
+\item Contribution in our in-house \textbf{ORM} to improve integration with queue and cache.
+\end{tightemize}
+
+\vspace{5pt} % Hacky fix for awkward extra vertical space
+\runsubsection{\href{https://www.linkedin.com/company/digikala/mycompany/}{\authorimg{dk.png} DIGIKALA.com}}
+\descript{| Software engineer}
+\location{July 2019 – January 2020 | Tehran, Iran}
+\begin{tightemize}
+\item Designing robust, fault-tolerant \textbf{Refund Engine} with \textbf{+100k TPD}, +10 3rd parties, and well structured to integrate with third parties and bank systems with \textbf{MySql}.
+
+\end{tightemize}
+\sectionsep
+
+\vspace{2pt}
+\runsubsection{\href{https://www.linkedin.com/company/arsam-robotics/about/}{\authorimg{arsam.png}Arsam-Robotics}}
+\descript{| Software Engineer}
+\location{March 2016 – November 2016 | Tehran, Iran}
+\begin{tightemize}
+
+\item Develop a network framework based on \textbf{ZMQ} and \textbf{MQTT} to achieve multi \textbf{QoS} MQ.
+\end{tightemize}
+\sectionsep
+\runsubsection{\href{https://www.linkedin.com/company/barbodtech/about/}{\authorimg{barbod.png}Barbod}}
+\descript{| Software Engineer }
+\location{April 2017 – March 2019 | Tehran, Iran}
+\begin{tightemize}
+\item Create \href{https://en.wikipedia.org/wiki/Internet_of_things}{\textbf{IOT}} platform based on \textbf{MQTT} protocol and \textbf{Mosquitto} with more than \textbf{1k} devices.
+\end{tightemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Honors} 
+\begin{tabular}{rll}
+2018	     & Ranked 6\textsuperscript{th}  & Electrical Engineering Department(over 35 students).\\
+2015	     & Talented Student & Amirkabir University of Technology \\
+2013        &  Rank 700  & University Entrance Exam(over \textbf{250000} participants) \\
+2012        & 4\textsubscript{th} place & Iranopen \textbf{Robocup} junior soccer
+\end{tabular}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.25\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+\sectionsep
+\location{Proficient:}
+PHP \textbullet{} Python \textbullet{} SQL \\
+\sectionsep
+\location{Experienced:}
+C \textbullet{} C++ \textbullet{}  GO  \textbullet{} JS \\
+\sectionsep
+\location{Familiar:}
+Java \textbullet{}  Bash \textbullet{} Assembly \textbullet{} 
+\sectionsep
+\sectionsep
+\subsection{Libraries/Frameworks}
+\sectionsep
+Symfony(PHP) \textbullet{} React(JS) \textbullet{} Django(Python) \textbullet{} Fibre(GO) \textbullet{} FastAPI(Python)
+\sectionsep
+\sectionsep
+\subsection{Tools/Platforms}
+\sectionsep
+Git \textbullet{} Docker \textbullet{} Temporal \textbullet K8s \\ MySQL  \textbullet{} Elasticsearch \textbullet{} Kafka \\ Docker \textbullet{} 
+Redis \textbullet{} Memcached \\ McRouter \textbullet{} Debezium \textbullet{} Lens\\
+Istio \textbullet{} h3geo \textbullet{} OSRM 
+
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+\subsection{	\href{https://aut.ac.ir/en}{\authorimg{aut.png}Amirkabir University}}
+\descript{Bachelor of Science(Electronic AND Software)}
+\location{2013 - 2018 | Tehran, Iran}
+\location{ Electronic GPA: 3.81 / 4.0 | Software GPA 3.82 / 4.0 }
+
+\sectionsep
+\subsection{\authorimg{sampad.png}\href{https://en.wikipedia.org/wiki/National_Organization_for_Development_of_Exceptional_Talents}{High School}}
+\descript{Bachelor's in Computer Science 
+\\and Engineering}
+\location{2009-2013 | Qom, Iran}
+\sectionsep
+
+\section{\href{https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PEj2AqMAAAAJ&citation_for_view=PEj2AqMAAAAJ:aqlVkmm33-oC}{Publication}}
+\subsection{SensorDrop}
+ Advantage Actor-Critic Method for Low Communication Overhead Data Collection (arXive)
+
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
+

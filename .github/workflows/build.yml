@@ -25,9 +25,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       
-      - uses: xu-cheng/latex-action@v2
-        with:
-          root_file: amirrassafi.tex
+      - name: Install LaTeX
+        run: sudo apt update && sudo apt --fix-missing && sudo apt install texlive-full
+
+      - name: Build PDF
+        run: xelatex -synctex=1 -interaction=nonstopmode "amirrassafi".tex
         
       - name: Upload
         uses: actions/upload-artifact@v2

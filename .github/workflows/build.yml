@@ -31,8 +31,10 @@ jobs:
       - name: Build PDF
         run: xelatex -synctex=1 -interaction=nonstopmode "amirrassafi".tex
         
-      - name: Upload
-        uses: actions/upload-artifact@v2
+      - name: release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
         with:
-          name: CV
-          path: amirrassafi.pdf
+          files: amirrassafi.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

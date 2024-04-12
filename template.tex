@@ -1,0 +1,342 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Freeman Curriculum Vitae
+% XeLaTeX Template
+% Version 3.0 (September 3, 2021)
+%
+% This template originates from:
+% https://www.LaTeXTemplates.com
+%
+% Authors:
+% Vel (vel@LaTeXTemplates.com)
+% Alessandro Plasmati
+%
+% License:
+% CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+%
+%!TEX program = xelatex
+% NOTE: this template must be compiled with XeLaTeX rather than PDFLaTeX
+% due to the custom fonts used. The line above should ensure this happens
+% automatically, but if it doesn't, your LaTeX editor should have a simple toggle
+% to switch to using XeLaTeX.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+	10pt, % Default font size, can be between 8pt and 12pt
+]{FreemanCV}
+
+\columnratio{0.60, 0.40} % Widths of the two columns, specified here as a ratio summing to 1 to correspond to percentages; adjust as needed for your content 
+
+% Headers and footers can be added with the following commands: \lhead{}, \rhead{}, \lfoot{} and \rfoot{}
+% Example right footer:
+%\rfoot{\textcolor{headings}{\sffamily Last update: \today. Typeset with Xe\LaTeX}}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\begin{paracol}{2} % Begin two-column mode
+
+%----------------------------------------------------------------------------------------
+%	YOUR NAME AND CURRICULUM VITAE TITLE
+%----------------------------------------------------------------------------------------
+
+\parbox[][0.11\textheight][c]{\linewidth}{ % Box to hold your name and CV title; change the fixed height as needed to match the colored box to the right
+	\centering % Horizontally center text
+
+\medskip % Vertical whitespace
+\medskip % Vertical whitespace
+\medskip % Vertical whitespace
+
+{\sffamily\Huge Amir Rassafi} % Your name
+
+
+\vfill % Push content to the top of the box
+}
+
+%----------------------------------------------------------------------------------------
+%	MAJOR RESEARCH PROJECT
+%----------------------------------------------------------------------------------------
+
+\section{Me}
+
+A proactive and energetic problem-solver, I am deeply passionate about computer science and computer engineering. With a relentless drive to overcome challenges, I thrive on finding innovative solutions in any environment. 
+
+\medskip % Extra vertical whitespace before the next section
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Work Experience}
+
+% Each job is added with a \jobentry command. Below is an empty one to use as a template:
+
+%\jobentry
+%	{} % Duration
+%	{} % FT/PT (full time or part time)
+%	{} % Employer
+%	{} % Job title
+%	{} % Description
+
+% All 5 parameters must be supplied but any can be empty if you don't need them
+
+%------------------------------------------------
+
+\company
+{https://www.linkedin.com/company/mustard-systems-ltd-/mycompany/}
+{Mustard}
+{London(UK)}
+
+\position
+{Senior Software Engineer}
+{Nov 2023 - Current}
+{
+
+	\item Contribution to analytics and core services based on \textbf{Python, GO}.
+}
+%------------------------------------------------
+
+\company
+{https://en.wikipedia.org/wiki/Digikala}
+{Digikala}
+{Tehran(IR)}
+
+\position
+{Head Of Engineering}
+{May 2022 - Nov 2023}
+{
+
+	\item Led the team to extract Inventory and Shipping services from a monolithic app to \textbf{microservices}, handling over \textbf{100k RPS}.
+	\item Implemented \textbf{Outbox} pattern with \textbf{MySQL} in Core for emit event consistency.
+	\item Benchmarked and tuned \textbf{Temporal} to handle over \textbf{+1k} TPS using \textbf{GO, PHP}.
+	\item Created a resilient infrastructure for event dispatch using \textbf{Debezium} and \textbf{Kafka}.
+	\item Designed and developed logistics as a service platform (\textbf{drop shipping}).
+	\item Conducted \textbf{business strategy} reviews to ensure optimal capacity and infrastructure compatibility.
+
+}
+
+\position
+{Tech Lead}
+{Jun 2021 - May 2022}
+{
+\item Refactored the fulfillment pick service(\textbf{1M} req/day).
+\item Designed a \textbf{backtesting platform} with \textbf{Python} and \textbf{AsyncIO} for warehousing procedures to reduce costs and aid system analysis.
+\item Designed an inventory engine for warehouses with over \textbf{100M} records.
+}
+
+
+\position
+{Senior Software Engineer}
+{Jan 2020 - Jun 2021}
+{
+\item Re-architected job assignment system to optimize job distribution over VMs.
+\item Improved high availability and scalability of \textbf{Memcached} cluster by adding \textbf{Mcrouter} for connection pooling and replication.
+\item Increased performance of \textbf{Elasticsearch} indexer by adding more \textbf{cache layer}.
+\item Contributed to the in-house \textbf{ORM} to enhance integration with queue and cache.
+}
+
+
+\position
+{Software Engineer}
+{Jul 2019 - Jan 2020}
+{
+\item  Designed a robust and fault-tolerant \textbf{Refund Engine} capable of handling over \textbf{100k TPD} and integrating with 10 third-party systems and bank systems using \textbf{MySql}.
+}
+
+
+\company
+{https://www.linkedin.com/company/arsam-robotics/about/}
+{Barbod}
+{Tehran(IR)}
+
+\position
+{Software Engineer}
+{Apr 2017 – Mar 2019}
+{
+\item Created an \href{https://en.wikipedia.org/wiki/Internet_of_things}{\textbf{IoT}} platform with \textbf{Mosquitto} and \textbf{MQTT} protocol to handle over 1k devices.
+%\item Developed a network framework based on \textbf{ZMQ} to achieve multi \textbf{QoS} MQ.
+}
+
+
+%----------------------------------------------------------------------------------------
+
+\switchcolumn % Switch to the second (right) column
+
+%----------------------------------------------------------------------------------------
+%	COLORED CONTACT DETAILS BOX
+%----------------------------------------------------------------------------------------
+
+\parbox[top][0.11\textheight][c]{\linewidth}{ % Box to hold the colored box; change the fixed height as needed to match the box to the left
+	\colorbox{shade}{ % Create colored box and specify background color
+		\begin{supertabular}{@{\hspace{3pt}} p{0.05\linewidth} | p{0.775\linewidth}} % Start a table with two columns, the table will ensure everything is aligned
+			\raisebox{-1pt}{\faHome} & UK, London \\ % Address
+			\raisebox{-1pt}{\faPhone} & +44 7522547754 \\ % Phone number
+			\raisebox{-1pt}{\small\faEnvelope} & \href{mailto:amir.rassafi@gmail.com}{amir.rassafi@gmail.com} \\ % Email address
+			\raisebox{-1pt}{\small\faDesktop} & \href{https://amir-h-rassafi.github.io}{amir-h-rassafi.github.io} \\ % Website
+			%\raisebox{-1pt}{\faGithub} & \href{https://github.com/username}{https://github.com/username} \\ % GitHub profile
+			\raisebox{-1pt}{\faLinkedinSquare} & \href{https://www.linkedin.com/in/amir-rassafi/}{linkedin.com/in/amir-rassafi/} \\ % LinkedIn profile
+			% See fontawesome.pdf in the Fonts folder for all icons you can use
+		\end{supertabular}
+	}
+	\vfill % Push content to the top of the box
+}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education} 
+
+% Each qualification entry is added with a \qualificationentry command. Below is an empty one to use as a template:
+
+%\qualificationentry
+%	{} % Duration
+%	{} % Degree
+%	{} % Honors, achievements or distinctions (e.g. first class honors)
+%	{} % Department
+%	{} % Institution
+
+% All 5 parameters must be supplied but any can be empty if you don't need them
+
+%------------------------------------------------
+
+\begin{supertabular}{r l} % Start a table with two columns, the table will ensure everything is aligned
+	
+		%------------------------------------------------
+	
+	\qualificationentry
+	{2018 -- 2019} % Duration
+	{Master of Science(Dropout)} % Degree
+	{GPA 3.8/4} % Honors, achievements or distinctions (e.g. first class honors)
+	{Electrical Eng} % Department
+	{\href{https://aut.ac.ir/EN}{Amirkabir University of Technology}} % Institution
+	
+
+	%------------------------------------------------
+	
+	\qualificationentry
+		{2013 -- 2018} % Duration
+		{Bachler of Science} % Degree
+		{GPA Major:3.81/4 Minor:3.82/4} % Honors, achievements or distinctions (e.g. first class honors)
+		{Electrical(Major) Computer(Minor)} % Department
+		{\href{https://aut.ac.ir/EN}{Amirkabir University of Technology}} % Institution
+	
+	
+	%------------------------------------------------
+	
+	\qualificationentry
+		{2006 -- 2013} % Duration
+		{School of Mathmatics} % Degree
+		{Score 18.05/20} % Honors, achievements or distinctions (e.g. first class honors)
+		{} % Department
+		{\href{https://www.linkedin.com/school/iransampad/}{Nodet(Sampad)
+		}} % Institution
+	
+	%------------------------------------------------
+
+\end{supertabular}
+
+%----------------------------------------------------------------------------------------
+%	AWARDS
+%----------------------------------------------------------------------------------------
+
+\section{Awards}
+
+% This section is laid out using a table. A \tableentry command adds lines with the following parameters:
+
+%\tableentry{Heading}{Content}{spaceafter}
+% All 3 parameters must be supplied but any can be empty if you don't need them
+% A "spaceafter" value in the third parameter will add some vertical space -- this is to be used between headings, leave it empty for no extra space
+
+%------------------------------------------------
+
+\begin{supertabular}{r l} % Start a table with two columns, the table will ensure everything is aligned
+	
+	%------------------------------------------------
+	
+	\tableentry{2018}{\textbf{Ranked 6th} over 35 talented students}{}
+	\tableentry{}{\textit{\href{https://aut.ac.ir/EN}{Amirkabir University of Technology}}}{spaceafter}
+	
+	%------------------------------------------------
+	
+	\tableentry{2015}{\textbf{Talented Student}}{}
+	\tableentry{}{\textit{\href{https://aut.ac.ir/EN}{Amirkabir University of Technology}}}{spaceafter}
+	
+		
+	\tableentry{2013}{\textbf{\textbf{Ranked 700} over 250,000 participants}}{}
+	\tableentry{}{\textit{\href{https://en.wikipedia.org/wiki/Iranian_University_Entrance_Exam}{Iran University Entrance Exam}}}{spaceafter}
+	
+			
+	\tableentry{2012}{\textbf{\textbf{4th place} Junior Soccer Robocup}}{}
+	\tableentry{}{\textit{\href{https://en.wikipedia.org/wiki/IranOpen}{Iranopen Robocup}}}{spaceafter}
+	%------------------------------------------------
+	
+\end{supertabular}
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+
+
+\section{Publications}
+
+%------------------------------------------------
+
+\textbf{Sensordrop} (2019). A \textbf{reinforcement learning} framework for communication overhead reduction on the edge (\textbf{\href{https://arxiv.org/pdf/1910.01601.pdf}{arxiv})})
+
+\medskip % Vertical whitespace
+
+%------
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS
+%----------------------------------------------------------------------------------------
+
+\section{Computer Skills} 
+
+% This section is laid out using a table. A \tableentry command adds lines with the following parameters:
+
+%\tableentry{Heading}{Content}{spaceafter}
+% All 3 parameters must be supplied but any can be empty if you don't need them
+% A "spaceafter" value in the third parameter will add some vertical space -- this is to be used between headings, leave it empty for no extra space
+
+%------------------------------------------------
+
+\begin{supertabular}{r l} % Start a table with two columns, the table will ensure everything is aligned
+	
+	%------------------------------------------------
+	
+	\tableentry{Programming}{Python, PHP, GoLang}{}
+	\tableentry{}{Java, JS, HTML, C, CPP}{spaceafter}
+	
+	%------------------------------------------------
+	
+	\tableentry{Libraries}{Symfony, VueJs, FastAPI}{}
+	\tableentry{Frameworks}{AIOHTTP, Django, Fibre}{}
+	\tableentry{}{Scrapy, Spring Boot}{spaceafter}
+	
+	%------------------------------------------------
+	
+	\tableentry{Tools}{Git, Docker, K8S, Istio}{}
+	\tableentry{Platforms}{PostgreSql, ElasticSearch}{}
+	\tableentry{}{MySQL, Redis, Memcached}{}
+	\tableentry{}{Kafka, RabbitMQ, Temporal}{}
+	\tableentry{}{Debezium}{}
+	
+	%------------------------------------------------
+	
+\end{supertabular}
+
+
+%----------------------------------------------------------------------------------------
+
+\end{paracol} % End two-column mode
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

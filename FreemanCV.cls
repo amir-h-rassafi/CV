@@ -224,6 +224,19 @@
 	\expandafter\ifstrequal\expandafter{#5}{}{}{& \textit{#5}\\[5pt]} % Institution
 }
 
+% Command for entering a new qualification (education)
+\newcommand{\qualificationentrymajorminor}[7]{
+	\textsc{#1} & \textbf{#2}\\ % Duration and degree
+	\expandafter\ifstrequal\expandafter{#3}{}{}{& Major #3\\} % Department
+		\vspace{3pt}
+	\expandafter\ifstrequal\expandafter{#4}{}{}{& {\small{#4}}\\}
+
+	
+	\expandafter\ifstrequal\expandafter{#5}{}{}{& Minor #5\\} % Department
+	\expandafter\ifstrequal\expandafter{#6}{}{}{& #6\\} % Department
+	\expandafter\ifstrequal\expandafter{#7}{}{}{& \textit{#7}\\[5pt]} % Institution
+}
+
 % Command for entering a separate table row -- used for any section that uses a two column table for alignment
 \newcommand{\tableentry}[3]{
 	\textsc{#1} & #2\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[5pt]} % First the heading, then content, then a conditional insertion of whitespace if the third parameter has any content in it

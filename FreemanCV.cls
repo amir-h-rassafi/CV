@@ -181,10 +181,15 @@
 	\medskip % Vertical whitespace
 }
 
-\newcommand{\company}[4]{
-	\large\href{#1}{#2}-\small{#3}
-	\expandafter\ifstrequal\expandafter{#4}{}{}{{\raggedright | \textbf{#4}}} % Job title
-	\medskip
+\newcommand{\company}[3]{
+	\large\href{#1}{#2}\small
+	\expandafter\ifstrequal\expandafter{#3}{}{}{{\space | \textbf{#3}}} % Job title
+	\vspace{4pt}
+}
+
+\newcommand{\mymediumsize}{%
+	\fontsize{11}{12}% % Adjust the font size and baseline skip as desired
+	\selectfont
 }
 
 \newcommand{\position}[3]{%
@@ -194,14 +199,15 @@
 	}%
 	\vspace{-3.0ex}%
 	% Duration and conditional full time/part time text
-	\expandafter\ifstrequal\expandafter{#1}{}{}{{\raggedright\large \textbf{#1}}} % Employer
+	\expandafter\ifstrequal\expandafter{#1}{}{}{{\raggedright\mymediumsize \textbf{#1}}} % Employer
+		\vspace{-0.5ex}%
 	% Duration and conditional full time/part time text
 	\expandafter\ifstrequal\expandafter{#3}{}{}{%
 		\begin{tightitemize}
 			#3
 		\end{tightitemize}%
 	} % Description
-	\medskip % Vertical whitespace
+\vspace{4pt}
 }
 
 

@@ -181,8 +181,9 @@
 	\medskip % Vertical whitespace
 }
 
-\newcommand{\company}[3]{
+\newcommand{\company}[4]{
 	\large\href{#1}{#2}-\small{#3}
+	\expandafter\ifstrequal\expandafter{#4}{}{}{{\raggedright | \textbf{#4}}} % Job title
 	\medskip
 }
 
